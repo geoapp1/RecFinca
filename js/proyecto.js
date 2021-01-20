@@ -208,9 +208,9 @@ var markID = L.circle([pointLtd, pointLng], markerOptions);
 	markID.bindPopup(markPopup);
 	markerArray.push(markID);
 	map.setView([pointLtd, pointLng], 100);
-//Dibujar los buffers alrededor de puntos con color de cada cultivo
-var geojii = {type: "FeatureCollection", features: pointArray}
-return L.geoJSON(turf.buffer(geojii, 5, {units: 'meters'}), {style:{color:color}}).addTo(map);	
+	//Dibujar los buffers alrededor de puntos con color de cada cultivo
+	var geojii = {type: "FeatureCollection", features: pointArray}
+	return L.geoJSON(turf.buffer(geojii, 5, {units: 'meters'}), {style:{color:color}}).addTo(map);	
 
 	
 	n++;
