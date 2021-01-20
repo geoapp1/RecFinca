@@ -70,7 +70,7 @@ function currentLocation(position) {
 	pointLng = position.coords.longitude;
 	pointLtd = position.coords.latitude;
 	map.setView([pointLtd, pointLng], 16);
-	alert("Utiliza los iconos para activar geolocalización, escribir el tipo de cultivo, añadir el punto al mapa, borrar los datos para reiniciar de ser necesario, extiender el mapa final y guardar los datos, respectivamente.");
+	alert("Utiliza los iconos para activar geolocalización, escribir el tipo de cultivo, añadir el punto al mapa, borrar los datos para reiniciar de ser necesario, extiender el mapa final y guardar los datos, respectivamente. Escribe el nombre de los cultivos igual que como aparecen en la leyenda.");
 	alert("La aplicación está adaptada para fincas en Puerto Rico, con los cultivos más comunes según el Dept. de Agricultura y el USDA.");
 }
 
