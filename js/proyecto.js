@@ -198,7 +198,8 @@ function storePoint() {
 	}
 
 		
-var markID = L.circle([pointLtd, pointLng], markerOptions); 
+//var markID = L.circle([pointLtd, pointLng], markerOptions); 
+var markID = L.circle([pointLtd, pointLng], {radius: 5, color: color, fillOpacity: 0.9 });
 	markID.addTo(map); //Dibujar marcador
 	markPopup = "ID= " + countId + '<br/>' +
 				"User ID= " + pointIdValue + '<br/>' +
@@ -209,8 +210,8 @@ var markID = L.circle([pointLtd, pointLng], markerOptions);
 	markerArray.push(markID);
 	map.setView([pointLtd, pointLng], 100);
 	//Dibujar los buffers alrededor de puntos con color de cada cultivo
-	var geojii = {type: "FeatureCollection", features: pointArray}
-	return L.geoJSON(turf.buffer(geojii, 5, {units: 'meters'}), {style:{color:color}}).addTo(map);	
+	//var geojii = {type: "FeatureCollection", features: pointArray}
+	//return L.geoJSON(turf.buffer(geojii, 5, {units: 'meters'}), {style:{color:color}}).addTo(map);	
 
 	
 	n++;
