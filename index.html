@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		 <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src *;">
+
+		<body style="background-color:Lavender;">
+		<meta charset="UTF-8">
+		
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<!--Archivos css que utiliza la app -->
+		<link rel="stylesheet" href="css/leaflet.css">
+		<link rel="stylesheet" href="css/proyecto.css">
+		<link rel="stylesheet" href="css/all.css">
+
+		
+		<title>RecFinca</title>
+
+						
+	</head>
+	
+	<body>
+		<font face="Helvetica" size="5" color="green">RecFinca App</font>
+		<font face="Verdana" size="2" color="black">Realice un reconocimiento de una finca agrícola, abandonada especialmente, de manera rápida y sencilla.</font>
+		
+		<div class="proyecto"> 
+		
+			<div id="map"></div>
+			<!-- Leyenda de app -->
+			<img src="img/leyenda.png" alt="Leyenda" width="140" height="500">
+		
+			<div id="menu">
+				<!-- Iconos que conectan a funciones de javascript -->
+				<div id="geolocation" class="fas fa-map-pin"></div>
+				<div id="id-box" class="fas fa-seedling"></div>
+				<div id="point" class="fas fa-plus"></div> 
+				<div id="memory" class="fas fa-eraser"></div>
+				<div id="mapa" class="fas fa-map"></div>
+				<span style="display:inline-block; width: 40px;"></span>
+				<div id="file" class="fas fa-save"></div>
+				
+					
+			
+			</div>
+			
+			<div id="point-id" style="display: none;">
+				<input type="text" id="point-id-text" value="">
+			</div>
+		
+		</div>
+
+		<!--Archivos .js que utiliza la app -->
+		<script src="js/leaflet.js"></script>
+		<script src="js/proyecto.js"></script>
+		<script src="js/turf.min.js"></script>
+
+		<script>
+		var bbox = turf.bbox(features);
+		</script>
+		
+	</body>
+	
+</html>
+
